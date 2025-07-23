@@ -1,13 +1,17 @@
 package com.example.myapplication;
 
-    import java.util.Date;
-public class Note {
-    String title;
-    String content;
-    Date createdDate;
+public abstract class Note {
+    protected String title;
+    protected String createdDate;
 
-    void getSummary(){
-        System.out.println(title+":"+content+"("+createdDate+")");
-
-    }
+    public Note(String title, String createdDate){
+        this.createdDate = createdDate;
+}
+public String getTitle(){
+        return title;
+}
+public void  setTitle(String title) {
+    this.title = title;
+}
+public abstract void display();
 }
